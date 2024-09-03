@@ -1,0 +1,1146 @@
+<!-- [(01.github 이해)] -->
+
+<!-- (((((on index_structure))))) -->
+@ <!-- [[coding 가르쳐주는 누나]] -->
+       ------------------------------------------- 
+        └> <!-- (((((github 이해))))) --> (V)
+<!-- ====================================================================== -->
+
+
+
+
+
+<!-- (((((contents_structure))))) -->
+@ <!-- (((((github 이해))))) -->
+       --------------------------------------- 
+        └> <!-- (((((github 역할))))) -->
+
+        └> <!-- (((((github 가입))))) -->
+
+        └> <!-- (((((github 작업))))) -->
+                --------------------- 
+                 └> <!-- (((command line에서의 git 명령어))) -->
+                         ----------------------------------
+                          └> <!-- (create a new repository on the command line) -->
+
+                          └> <!-- (push an existing repository from the command line) -->
+
+        └> <!-- (((((git 다운로드))))) -->                          
+
+        └> <!-- (((((git 환경설정))))) -->                          
+
+        └> <!-- (((((작업한 pjt를 ==>> github에 올리기))))) -->
+                ------------------------------------------ 
+                 └> <!-- (((((vs code에서,,github와 연동하기 & git 명령어 실행))))) -->
+
+                 └> <!-- (((((vs code에서,,code 수정 후,,github 업데이트하기))))) -->
+
+        <!-- ================================================================================= -->
+        <!-- =========================================================================== (end) -->
+
+        └> <!-- (((((다른 github 계정과 연동하기))))) -->
+
+        └> <!-- (((((git 명령어 의미 보충))))) -->
+                ----------------------------- 
+                 └> <!-- (((branch와 checkout))) -->
+
+<!-- ============================================================================ -->
+
+
+
+
+
+
+<!-- (((((github 역할))))) -->
+@ 1) my source code를 저장 + version 관리,,
+                                <!--
+                                    (version 관리)의,,의미는,,
+                                    (형상 관리)와,,
+                                    맥락이 동일한 것임!!
+                                 --> 
+  2) source code 공유,,
+  3) 협업하는 공간.. 
+
+@ cf) 973 line ==>> 명령어 final version.. 
+<!-- ============================================================================== -->
+
+
+
+
+
+
+<!-- (((((github 가입))))) -->
+@ 가입 내용은,,
+  다른 note에도 있으므로,,
+    V V 
+  참고할 것..   
+    <!--
+        cf) 남궁성 teacher!!
+     -->
+<!-- =================================================================================== -->
+
+
+
+
+
+
+<!-- (((((github 작업))))) -->
+@ sign in.. 
+
+@ 좌측,,녹색 New button.. 
+
+@ Create a new repository page로 넘어가고~~
+    <!--
+       cf) repository 하위에,,
+           branch가 있는 것임!!
+    -->
+  ------------------------------------------- 
+  Repository name box ==>> 원하는 repo 명 입력.. 
+                             <!--
+                                self) pjt를 올릴,,
+                                      remote 상의,,
+                                      폴더를 생성한다고 생각하면 될 듯!!
+                                =========================================
+                                
+                                @ cf) first noona pjt로 입력하면,,
+                                        V V 
+                                      repo는,,
+                                      coding-noona-github-lesson 형태로,,
+                                      사이드바(-) 처리되어서,,
+                                      생성됨!!  
+                             -->
+    V V 
+  Public에 체크.. 
+       <!--
+          cf) teacher도,,
+              public으로 해서,,
+              공개해놓는다고 함!!
+       -->      
+    V V 
+  필요 시,,
+  Add a README file에도 ==>> v 체크..                            
+    V V 
+  하단,,녹색 Create repository 클릭..   
+
+@ repo 명--(fist-noona-pjt) 페이지로 넘어가고~~ 
+    <!--
+       이 단계까지에서,,
+       branch를 toggle해서 보면,,
+         V V
+       main branch만 표시됨!! 
+       -----------------------------------
+       즉,,
+       main branch만 생성된 것임!!
+    -->
+  ------------------------------------------------    
+
+<!-- =================================================================================== -->
+
+
+
+
+
+<!-- (((command line에서의 git 명령어))) -->
+@ teacher 왈) 모든 명령어 앞에,,
+              git이 붙음!! 
+                <!--
+                   self) git 명령어를 사용하겠다고 선포하는 것,,
+                           or 
+                         git을 부르는 호칭으로,,
+                         받아들이면 될 듯!!
+                -->
+
+<!-- (create a new repository on the command line) -->
+echo "# coding-noona-test" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/dk-prtc/coding-noona-test.git
+git push -u origin main
+
+<!-- (push an existing repository from the command line) -->  
+git remote add origin https://github.com/dk-prtc/coding-noona-test.git
+git branch -M main
+git push -u origin main
+<!-- =============================================================================== -->
+
+
+
+
+
+<!-- (((((git 다운로드))))) -->                          
+@ teacher 왈) github는 ==>> source code를 올리는 공간의 개념,,
+              ------------------------------------------------ 
+              git은 ==>> 실제,,
+                         source code를 올리는 역할!! 
+
+<!-- (chrome으로 가서~~) -->
+@ https://git-scm.com으로 go!! 
+
+@ Downloads 클릭.. 
+    <!--
+        운영 체제에 맞게,,
+        선택해서,,
+        다운받으면 됨!!
+        -------------------------------
+        계속 next ==>> next,,
+        click하면 됨!!
+    -->
+<!-- ================================================================================== -->
+
+
+
+
+
+<!-- (((((git bash에서의,,git 환경설정))))) -->
+@ git download 후,,
+    V V 
+  좌하단,,window 탐색기에서,,
+  git 입력.. 
+
+@ Git Bash 선택해서,,
+  열기.. 
+  
+@ cmd와 비슷한,,
+  command line 창이 뜨고~~
+  ----------------------------------------------- 
+  git config --global user.name "dk",,입력,, 
+    <!--
+        의미) 사용자 이름 설정하는 역할!!
+        =======================================
+
+        @ self) config라는 말 자체가,,
+                설정이라는 의미!!
+    -->
+
+@ 결과) 별다른 결과없이,,
+        다음 입력 준비로 넘어감.. 
+        
+@ git config --global user.email "dkfbt1579@gmail.com",,입력.. 
+     <!--
+         의미) 사용자 email 설정하는 역할!!
+               ----------------------------
+               주의) github에서 사용하는,,
+                    email을 입력해야 함!!
+                    --------------------------
+                    self) 그래야,,
+                          git 명령어가,,
+                            V V
+                          github에서 연동되어,,
+                          실행될 듯!!
+                    ------------------------------
+                    self) 설정보다는,,
+                          등록이라는 개념이 맞는 듯!!
+         =========================================================
+         
+         @ self) pjt 전용 github의,,
+                 email 계정을 입력했는데,,
+                 ---------------------------
+                 문제없이,,
+                 went well!!
+     --> 
+
+@ 결과) 별다른 결과없이,,
+        다음 입력 준비로 넘어감..      
+
+@ git config --list 입력.. 
+
+@ 결과) 설정한 list들이,,
+        표시되는데,,
+        ----------------------------------- 
+        다른 것은 무시해도 좋고,,
+        -------------------------------------- 
+        아래쪽,,
+        user.email,,
+        user.name에,,
+          V V 
+        입력한 내용과 맞는지 확인..   
+          <!--
+              teacher 왈) 이로써,,
+                          git 환경 설정은 ==>> 끝난 것임!!
+          -->
+<!-- ============================================================================= -->
+
+
+
+
+
+
+<!-- (((((vs code에서,,github와 연동하기 & git 명령어 실행))))) -->
+
+<!-- (vs code로 가서~~) -->
+@ 상단 Terminal tab.. 
+
+@ New Terminal.. 
+
+@ editor 창 아래,,
+  새로운 창 생김.. 
+
+@ TERMINAL tab에서 작업해주면 됨.. 
+
+@ 앞서 다룬,,
+  git 명령어,,
+    V V 
+  차례대로 입력하면 됨.. 
+  -------------------------------------------------------- 
+  git init
+  git add README.md
+  git commit -m "first commit"
+  git branch -M main
+  git remote add origin https://github.com/dk-prtc/coding-noona-test.git
+  git push -u origin main  
+
+@ ex)
+-- self) git 명령어 입력 위치는,,
+           V V 
+         꼭 vscode에서만 아니라,,
+         -------------------------------------------- 
+         해당 폴더에서,,
+         우클릭한 후,,
+         Git Bash Here에서 실행해도 될 듯!!
+           
+<script>
+git init 
+  /*
+    git 사용을 위한,,
+    초기화를 하는 역할!!
+    -------------------------------------------
+    맨 처음 pjt를 올릴 시,,
+    반드시,,
+    입력해줘야 함!!
+    =========================================================
+
+    @ 결과) Initialized empty Git repository in E:/.coding new/999.practice/.git/
+           -----------------------------------------------------------------------
+           self) in 이하의,, 
+                 텅빈 git repo를,,
+                 초기화했다는 의미!!
+           --------------------------------------------
+           cf) vs code의,,
+               PE 영역에,,
+                 V V
+               U 모양이 표시됨!!           
+           ---------------------------------------------------
+           cf) 이 단계에서,,
+               git.git 폴더가 생성되는 것임!!     
+  */
+</script>
+
+@ ex1) 
+<script>
+git add . 
+  /*
+    점(.)--(모든 파일)을,,
+    추가하는 역할
+    ---------------------------------------
+    예를 들어,,
+    index.html 파일도 올리고,,
+    style.css 파일도 올리고,,
+      V V
+    모든 파일 올리겠다는 의미!!
+    -------------------------------------------
+    self) in git,,
+          *가 아닌,,
+          점(.)이 ==>> all을 의미하는군!!    
+  */
+</script>
+
+@ ex1)
+-- 파일 하나만 올리고자 할 경우,,
+     V V 
+   (해당 파일명.확장자)를,,
+   입력해주면 됨..    
+
+<script>
+git add index.html
+  /*
+    index.html 파일을,,
+    추가하는 역할!!
+    =========================================
+
+    @ teacher 왈) teacher는,,
+                    V V 
+                  그냥,,
+                  git all .으로,,
+                  파일을 올린다고 함!!  
+                  ---------------------------------
+                  why) 파일 하나를 올릴 시에도,,
+                       .으로,,
+                       cover 가능하므로!!
+  */  
+</script>
+
+@ ex2)
+<script>
+git status
+  /*
+    결과) new file로 ==>> 파일들이 명시됨!!
+         ------------------------------------
+         git add .으로,,
+         추가할 수 있는 모든 파일을,,
+         탐색했더니,,
+           V V
+         new file로,,
+         명시된 파일들이,,
+           V V 
+         list로 표시되고 있는 것임!!    
+    =========================================================
+    
+    @ cf) On branch master
+          No commits yet
+          Changes to be committed:
+            V V
+          new file 목록 위에,,
+          branch master 상에,,
+          아직 commit은 되지 않았고,,
+          commit 되어 질 변화들이라고,,
+          말해주고 있는 것임!!
+          ---------------------------------------------
+          cf) branch 명 master를,,
+              main으로 수정했으므로,,
+                V V 
+              main branch로 명시됨!!  
+  */
+</script>
+
+@ ex3)
+<script>
+git commit -m "first commit"
+  /*
+    새로운 변경 사항--changes를,,
+    github에 올리기 전,,
+      V V
+    (commit message)를,,  
+    repo에 저장하는 역할!!
+    ----------------------------------
+    -m은 ==>> message를 의미하며,,
+             ------------------------------------ 
+             commit message를,,  
+             직접 명령어에 포함시킨다는 의미!!
+    --------------------------------------------------
+    주의) 이 단계에서는,,
+          변경 사항--changes에 대한,,
+          message를 올리는 것이지,,
+          -----------------------------------
+          아직,,
+          변경 사항이,,
+            V V 
+          github--remote repo에 올라간 것이 아님!!           
+    =======================================================
+    
+    @ teacher 왈) pjt에 대해,,
+                 (history)를 commit,,
+                  즉,,
+                  history를 만들어주는 역할임!!
+                  -------------------------------------
+                  예를 들면,,
+                  changes--(변경 사항)을 추가하면서,,  
+                    V V
+                  first version,,second version ==>> final version이라고,,
+                  version history를,,
+                  명시해주는 것임!!
+    ===================================================
+    
+    @ 결과) [master (root-commit) 830165d] first commit
+            2 files changed, 12 insertions(+)
+            create mode 100644 index.html
+            create mode 100644 style.css
+  */
+</script>
+
+@ ex4)
+-- vs code에서 ==>> github로 보내기.. 
+
+<script>
+git remote add origin https://github.com/dk-prtc/coding-noona-test.git
+  /*
+    의미) 원격으로 추가한다,,
+          명시된 repo로!!
+          ---------------------------------------------------------------------
+          gpt) git remote add origin까지 ==>> git을 부르며,,
+                                             origin이라는 별칭의,,
+                                             remote 저장소를 추가하라는 의미!!
+              -----------------------------------------------------------------------------                               
+              https://github.com/dk-prtc/coding-noona-test.git ==>> 위 remote 저장소의,,
+                                                                    위치를 명시함!!    
+              -----------------------------------------------------------------------------
+              이제,,
+              orgin이라는 별칭으로,,
+              remote 저장소에 접근할 수 있게 된 것이고,,
+                V V 
+              git push orgin master,,
+              git pull orgin master 등의,,명령어에서,,
+              활용할 수 있는 것임!!
+              ----------------------------------------------
+              cf) git push orgin master에서,,
+                  master는,,
+                    V V
+                  local--(내 컴퓨터) 영역의,,
+                  master branch를 지칭함!!
+                  --------------------------------------
+                  self) 원래,,
+                        git push orgin master:master인데,,
+                        -----------------------------------
+                        remote 영역의,,
+                        master branch를 지칭하는,,
+                        :master가,,
+                          V V 
+                        생략된 것으로 간주하기로 함!!    
+    =============================================================================
+    
+    @ cf) https: ~ ~ 부분은,,
+            V V
+          github,,해당 repo page에서,,
+          녹색 Code button toggle하면,,
+            V V
+          표시되어 있는데,,
+          --------------------------------------
+          복/붙하면 됨!!  
+    =========================================================================================
+    
+    @ teacher 왈) vs code와,,
+                    |
+                  github의,,
+                  (연결 고리)를 생성하는 역할이라 보면 됨!!   
+    =============================================================
+    
+    @ 결과) 아무 반응 없으면 ==>> 정상!!
+  */
+</script>
+
+@ ex5)
+-- 생성한 연결 고리 확인.. 
+
+<script>
+git remote -v 
+  /*
+    gpt) 현재,,
+         github에 설정된,,
+         원격 repo의 이름을,,
+           V V
+         url에 포함시켜,,
+         표시해주는 역할
+         --------------------------------------
+         -v flag는,,
+           V V
+         원격 repo의,,
+         url을 표시하도혹 하는 역할!!   
+    ============================================================================
+    
+    @ 결과) origin https://github.com/dk-prtc/coding-noona-test.git (fetch)
+            origin https://github.com/dk-prtc/coding-noona-test.git (push)
+              V V
+            teacher 왈) 이로써,,
+                        local--(내 저장소)와,,
+                          |
+                        remote repo 사이에,,
+                        연결 고리가 생성된 것임!!     
+  */
+</script>
+
+@ ex6)
+<script>
+git push origin master
+  /*
+    의미) git아!! 
+         밀어내라--보내라,,
+          origin--remote 영역의,,master branch로,,
+          local 영역의,,master branch의 변경 사항을!!
+          --------------------------------------
+          gpt) git push origin master에서는,,
+                 V V
+               명시된 master가,,
+               local의 branch라고 하고,,
+               ---------------------------------------    
+               git pull origin master에서는,,
+                 V V
+               remote의 branch라고 함!!  
+    ===========================================================
+    
+    @ 주의) branch 명 master를,,
+            main으로 수정했으므로,,
+              V V 
+            git push origin main으로 입력해야 함!!  
+    ===========================================================
+    
+    @ *** (중요) ***
+           V V
+      git push origin master는,,
+        V V
+      origin--remote의,,master branch로,,
+        V V
+      local의,,
+      master branch의 변경 사항을 보내라는 의미!!
+      ----------------------------------------------
+      즉,,
+      remote의 branch 명과,,
+        |
+      local의 branch 명이,,
+      동일한 경우임!!
+      ---------------------------------------------------
+      만약,,
+      각 branch 명이 다를 경우,,
+        V V       
+      예를 들어,,
+      local branch가 ==>> a-branch,,
+      remote branch가 ==>> b-branch라면,,
+        V V  
+      git push origin a-branch:b-branch 형태로,,
+      local branch master 옆에,,
+        V V
+      콜론을 사용하여,,
+      :(remote brancn)로 덧붙여 줌!!    
+      ------------------------------------------------------
+      self) 그렇다면,,
+            git push origin master는,,
+              V V 
+            git push origin master:master인데,,
+            -----------------------------------------
+            콜론(:) 부분이,,
+            생략된 것으로 이해하면 될 듯!!   
+    ============================================================
+    
+    @ gpt) git push ==>> local의,,
+                         변경 사항을,,
+                           V V
+                         remote로 전송하는 역할
+           ----------------------------------------
+           origin ==>> 일반적으로,,
+                       remote--(원격 저장소)를 의미                  
+          
+  */
+</script>
+
+@ ex6-1)
+<script>
+git push origin master
+  /*
+    vs code와,,
+      |
+    github간의,,
+    첫 connect라면,,
+      V V 
+    Authorize Git Credential Manager가 뜨고~~
+    --------------------------------------------------   
+    Confirm access로 넘어가서~~
+    --------------------------------- 
+    pw 입력해줘야 함!!
+    ================================================================
+
+    @ 결과) info: please complete authentication in your browser...
+            Enumerating objects: 4, done.
+            Counting objects: 100% (4/4), done.
+            Delta compression using up to 8 threads
+            Compressing objects: 100% (3/3), done.
+            Writing objects: 100% (4/4), 394 bytes | 197.00 KiB/s, done.
+            Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+            To https://github.com/letdkdev/coding-noona-github-lesson.git
+            * [new branch]      master -> master
+               V V
+            local master에서 ==>> remote master로,,
+            보내졌음이 표시됨!!          
+            ------------------------------------------------------
+            cf) 이 단계에서,,
+                remote 영역에,,
+                  V V
+                master branch가 생성됨!!       
+  */
+</script>
+
+<!-- (github로 가서~~) -->
+@ 새로 고침.. 
+
+@ toggle해서,,
+  master branch로 go!! 
+
+@ repo coding-noona-github-lesson에,,
+    V V 
+  index.html,,
+  style.css 파일들이,,
+  표시되고 있음..   
+    <!--
+       *** (중요) ***
+            V V
+       github에서 작업 시,,     
+       repo coding-noona-github-lesson만 생성하고,,
+       그 하위에,,
+       master branch는,,
+       생성해 준 적이 없는데,,
+       ------------------------------------------     
+       git push origin master 실행 과정에서,,
+       생성된 것임!!
+       ------------------------------------------
+       즉,,
+       branch가 없는 상태에서,,
+       git push origin master의 첫 실행이라면,,
+         V V
+       branch 생성까지도 해주는 것임!!  
+       ---------------------------------------------
+       cf) branch 명 master를,,
+           main으로 수정함!!
+    -->
+<!-- =================================================================================== -->
+
+
+
+
+
+
+<!-- (((((vs code에서,,code 수정 후,,github 업데이트하기))))) -->
+
+<!-- (vs code로 가서~~) -->
+@ ex)
+<body>
+
+  <h3>
+    add ==>> modify!! 
+  </h3>
+   
+     ==>> // <!-- (삽입) -->
+</body>
+
+@ ctrl + s.. 
+
+@ 하단 Terminal tab.. 
+
+@ teacher 왈) 앞서의 명령어들,,
+              반복 작업임.. 
+
+@ ex)
+<script>
+git add . 
+  /*
+    주의) 수정 사항을,,
+          github에 update하는 경우,,
+            V V
+          git init은 해줄 필요 없음!!
+          ------------------------------------
+          self) 해봤자,,
+                reinitialized ~ ~라고 표시됨
+  */
+</script>
+
+@ ex1)
+<script>
+git status 
+  /*
+     결과) On branch master
+           Changes to be committed:
+          (use "git restore --staged <file>..." to unstage)
+           modified:   index.html
+             V V
+           index.html이,,
+           수정되었다고 표시됨!!  
+           ------------------------------------------------------
+           즉,,
+           수정된 파일들이,,
+           표시되는 것임!!
+           --------------------------------------------------------
+           cf) branch main으로 표시됨!!
+  */
+</script>
+
+@ ex2)
+-- 이제,,또,,
+   history--version up을 해주면 됨.. 
+
+<script>
+git commit -m "second commit"
+  /*
+    결과) [master e5b8688] second commit
+          1 file changed, 5 insertions(+)
+  */
+</script>  
+
+@ ex3)
+-- 깨달음) 2번째 commit 시에는,,
+           이미 origin이 생성된 상태이므로,,
+             V V 
+           git remote add origin https://github.com/dk-prtc/coding-noona-test.git 단계가,,
+           필요없음!! 
+           ------------------------------------------------------------------------------------ 
+           입력하면,,
+             V V 
+           error: remote origin already exists.라고 표시됨!!  
+            
+<script>
+git push origin master 
+  /*
+    전동 맥락으로!!
+    ========================================
+
+    @ 결과) Enumerating objects: 5, done.
+            Counting objects: 100% (5/5), done.
+            Delta compression using up to 8 threads
+            Compressing objects: 100% (3/3), done.N
+            Writing objects: 100% (3/3), 349 bytes | 174.00 KiB/s, done.
+            Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+            remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+            To https://github.com/letdkdev/coding-noona-github-lesson.git
+              830165d..e5b8688  master -> master
+                                -----------------
+                                 └> (주목!!)
+                V V
+            master에서 ==>> master로의,,
+            이동이 표시됨!!    
+                V V
+             ((local master branch에서 ==>> origin--remote master branch))로 이동을 의미!!   
+            --------------------------------------------------------------------------
+            cf) github에서는,,
+                  V V
+                어감 때문에,,   
+                master 대신,,
+                main branch 정책을 펴고 있음!!
+                -----------------------------------------------
+                1) local master branch ==>> remote main branch로 하든지,,
+                2) local main branch ==>> remote main branch로 하든지,,
+                  V V
+                how to do that,,  
+                남궁성 teacher note 참고할 것!!  
+  */
+
+</script>
+
+<!-- (github로 가서~~) -->
+@ 새로 고침.. 
+
+@ 해당 파일--index.html에,,
+  수정 사항이,,
+  반영되었는지 확인.. 
+   
+@ repohttps://github.com/letdkdev/coding-noona-github-lesson.git 클릭.. 
+
+@ index.html에 ==>> second commit이라고 표시됨.. 
+                      <!--
+                         git commit -m "second commit" 실행이,,
+                         반영된 것임!!
+                      -->
+
+@ teacher 왈) github에서,,
+                V V 
+              1) source code 저장,,
+              2) version 관리,,
+              3) 공유
+                V V 
+              위 3가지를 할 수 있음을,,
+              알 수 있음..     
+<!-- ========================================================================================= -->
+<!-- =================================================================================== (end) -->
+
+
+
+
+
+@ next time,,
+  github로 협업하는 내용,,
+  다룰 예정.. 
+<!-- ========================================================================================= -->
+
+
+
+
+
+@ git 명령어,,
+  총 정리한 것,,
+    V V 
+  https://hackmd.io/@oW_dDxdsRoSpl0M64Tfg2g/ByfwpNJ-K에 있으니,,
+    V V 
+  추후,,정리할 것!!    
+<!-- ============================================================================================ -->
+<!-- ====================================================================================== (end) -->
+
+
+
+
+
+
+<!-- (((((다른 github 계정과 연동하기))))) -->
+@ 문제점) remote: Permission to ~ ~ denied ~ ~
+
+<!-- (((((해결책))))) -->
+@ 문법) git remote set-url origin "https://your-name@github.com/your-name/repo-name.git"
+
+@ Connect to Github 창 뜨고~~
+  ------------------------------------ 
+  token을 입력하든지,,
+    or 
+  github로 가서,,
+  Authorize Git Credential Manager에서,,
+  Authorize해줘야 함..   
+    V V 
+  pw 입력,,
+    V V 
+  녹색 Confirm 클릭..   
+
+@ 결과) info: please complete authentication in your browser...
+                 <!--
+                     인증을 완료하라는 의미!!
+                 -->
+        Enumerating objects: 3, done.
+        Counting objects: 100% (3/3), done.
+        Delta compression using up to 8 threads
+        Compressing objects: 100% (3/3), done.
+        ~ ~ ~ ~ ~
+        * [new branch]      master -> master
+
+<!-- (github로 가서~~) -->
+@ 새로 고침.. 
+
+@ master branch로 go!! 
+
+@ vs code의,,pjt--파일이,,
+  표시되고 있음.. 
+
+@ 수정 사항 발생 시,,
+  전동 맥락 참고하며,,
+  진행하면 됨.. 
+
+@ 주의) 새롭게 생성한 github 계정의,,
+        repo로 upload하는 경우,,
+          V V 
+        new token을 발급해야 함..
+        -------------------------------------------- 
+        발급 방법은,,
+        아래 참조..  
+          <!--
+              (token 문제로 인한,,error 메세지)
+                 V V 
+              remote: Permission ~ ~ denied ~ ~  
+              fatal: unable to access 'https://github.com/letdkdev/Book_Rental.git/': The requested URL returned error: 403
+          -->
+
+-- https://hoohaha.tistory.com/37          
+
+@ 문제점) 1) git remote set-url origin "new repo https"도 실행하고,,
+          2) new token도 생성하고,,
+          둘 다 했음에도,,
+          403 error 발생.. 
+          
+<!-- (((((해결책))))) -->
+@ cf) https://velog.io/@nies/git%EC%97%90-push%ED%95%98%EB%A0%A4%EB%8A%94%EB%8D%B0-remote-Permission-to-git%EC%A3%BC%EC%86%8C-denied-to-user%EC%9D%B4%EB%A6%84-403-error-%ED%95%B4%EA%B2%B0-%EB%B0%A9%EB%B2%95-AI-%EC%9B%B9-%EA%B0%9C%EB%B0%9C-%EB%8B%A4%EC%84%AF%EC%A7%B8-%EC%A3%BC2%EC%9D%BC%EC%B0%A8  
+
+<!-- (intellij terminal로 가서~~) -->
+@ ex)
+<script>
+git config --list 
+</script>
+
+@ window에서,,
+  제어판으로 go!! 
+  
+@ 사용자 계정.. 
+
+@ 자격 증명 관리자.. 
+
+@ Windows 자격 증명.. 
+
+@ 일반 자격 증명 영역에서,,
+  github 관련 찾기..  
+    V V 
+  V 클릭해,,toggle.. 
+  
+@ 사용자 이름,,확인..
+     V V 
+   제거..   
+
+<!-- (intellij terminal로 가서~~) -->
+@ cf) 새롭게 하기 위해서,,
+      pjt가 있는 폴더의,,
+      .git 폴더를 삭제한 후,,
+      진행할 것.. 
+
+@ ex) 
+-- cf) pjt 해당 폴더의,,
+       git bash에서 진행해도,,
+       github와 연동 가능.. 
+
+<script>
+git init 
+
+git add .
+  /*
+    문제점)  LF will be replaced by CRLF 발생
+  */
+
+git status
+
+git commit -m "initial commit"
+  /*
+    문제점) master (root-commit) f3af56d] initial commit
+              V V 
+           여전히,,
+           local branch가 ==>> master로 표시되고 있음   
+  */
+
+cf) git remote set-url origin https://github.com/letdkdev/Book_Rental.git 
+
+git remote -v 
+
+git push origin main  
+  /*
+    cf) 예전에,,
+        local git도,,
+        remote git도,,
+        모두 default branch 명이,,
+          V V 
+        main이 되도록 설정한 바 있으므로,,
+          V V 
+        main으로 입력한 것임!!  
+  */
+</script>
+
+@ github의,,
+  login or token 입력하라는,,
+  pop up 창 뜨고~~
+  ------------------------------------------ 
+  for me,,
+  token 입력.. 
+
+<!-- (github로 가서~~) -->
+@ 새로 고침.. 
+
+@ 해당 repo 클릭해서,,
+  commit되었는지 확인.. 
+
+@ cf) readme.md 파일은,,
+      commit에 실패 가능성 때문에,,
+      제외했으므로,,
+        V V 
+      기존꺼 복/붙해서,,
+      새로이 작성해 줄 것!!     
+<!-- ========================================================================================= -->
+
+
+
+
+
+
+<!-- (((((git 명령어 의미 보충))))) -->
+@ clone ==>> github--remote 저장소를,,
+               V V 
+             내 컴--local에,,
+             (복제)해오는 역할.. 
+  ----------------------------------------------- 
+  add ==>> local에서 작업한 파일들을,,
+           stage 영역에 추가하는 역할.. 
+             <!--
+                self) unstaged files에서 ==>> staging files로,,
+                      변경하는 역할이라 보면 될 듯!!
+                      ----------------------------------------
+                      창고에서 출하된 미사일을,,
+                      ((미사일 발사대에 올리는 단계))라고,,
+                      받아들이면 될 듯!!
+             -->
+  ----------------------------------------------------------------- 
+  commit ==>> stage에 올라온 파일들을,,
+                V V 
+              local의,,repo--(.git 폴더)에,,    
+              commit(저장)하는 역할.. 
+                <!--
+                   self) 미사일 발사까지는 아니고,,
+                         -----------------------------
+                         ((미사일 장전)) 정도로,,
+                         받아들이면 될 듯!!
+                -->         
+  --------------------------------------------------------------------------- 
+  push ==>> local repo에 commit한 것을,,
+              V V 
+            remote repo로,,
+            올리는--upload 역할!!   
+              <!--
+                 self) ((미사일 발사)) 단계!!
+              -->
+<!-- ==================================================================================== -->
+
+
+
+
+
+
+<!-- (((branch와 checkout))) -->
+@ https://onelight-stay.tistory.com/7 참고.. 
+
+<!-- (intro) -->
+@ hello.md라는,,
+  작업한 파일이 있는데,,
+  -------------------------------------- 
+  이 파일을 base로 해서,,
+  추가 내용을 작성하려고 함.. 
+  --------------------------------------- 
+  그래서,,
+  기본 base를 근간으로,
+    V V 
+  1)안,,2)안을 작성했는데,,
+  ----------------------------------------------- 
+  두 가지 안을 보존하면서,,
+  작업을 이어가고,,
+    V V 
+  최종적으로,,
+  한가지 안을 선택하고자 함.. 
+    <!--
+       즉,,
+       기본 내용은 근간으로 하되,,
+       ---------------------------
+       plan a,,
+       plan b를,,
+       작성하는 것임!!
+    -->
+  ---------------------------------------------- 
+  이러한 경우에 사용할 수 있는 것이,,
+    V V 
+  branch,,checkout 개념인 것.. 
+  
+<!-- (branch) -->
+@ 한 파일을 근간으로 해서,,
+  여러 작업을 하고자 할 때,,
+    V V 
+  생성해서 활용할 수 있는,,
+  일종의 작업 환경임.. 
+    <!--
+       *** (중요) ***
+            V V
+       a branch로부터,,
+       b branch를 생성했다고 해서,,
+         V V
+       a branch 내용이,,
+       b barnch로 복제되는 것이 아님!!
+       ----------------------------------
+       (새로운 branch)--(b branch)는,,
+       empty 상태에서 시작하고,,
+         V V
+       만약,,
+       a branch 내용을,,
+       b branch에 upload하려면,,
+         V V             
+       b branch를 checkout해서,,
+       현재 작업 branch로 정한 후,,
+         V V
+       merge를 해야 함!!    
+    -->
+  
+<!-- (checkout) -->
+@ repo에서,,
+  특정 commit이나..
+    or
+  특정 branch로,,
+  돌아가고 싶을 때 사용.. 
+    <!--
+        self) 여기서,,
+              특정 commit이라 함은,,
+                V V
+              원하는 작업된 상태의,,
+              (특정 시점)을 의미하는 듯!!  
+    -->
+
+<!-- (head branch) -->
+@ 현재 작업 중인 branch를 의미..
+  
+                          
+                
+           
+           
+
+
+
+
